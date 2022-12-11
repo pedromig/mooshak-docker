@@ -68,6 +68,7 @@ EXPOSE 443
 
 # Expose Volumes
 VOLUME /home/mooshak/data
+VOLUME /etc/apache2
 
 # Healthcheck
 HEALTHCHECK --interval=10s --timeout=30s --start-period=5s --retries=3 \

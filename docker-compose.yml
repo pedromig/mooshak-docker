@@ -12,5 +12,3 @@ services:
     restart: unless-stopped
     ports:
       - ${MOOSHAK_PORT}:80
-    volumes:
-      - ./mooshak:/home/mooshak/data

@@ -29,7 +29,7 @@ RUN apt-get install -y gcc make tcl apache2 apache2-suexec-custom \
   bash lpr time cron host rsync libxml2-utils xsltproc curl
 
 # Install Tooling 
-RUN apt-get install -y build-essential default-jre pypy3 
+RUN apt-get install -y build-essential default-jre pypy3 default-jdk
 
 # Cleanup
 RUN apt-get clean 

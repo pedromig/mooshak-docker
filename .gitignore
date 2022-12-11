@@ -1,0 +1,5 @@
+# Ignore Local Volumes
+mooshak/*
+
+# Ignore Local Environment 
+*.env

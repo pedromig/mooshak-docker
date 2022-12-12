@@ -26,10 +26,10 @@ ENV LANGUAGE=en_US.UTF-8
 
 # More packages
 RUN apt-get install -y gcc make tcl apache2 apache2-suexec-custom \
-  bash lpr time cron host rsync libxml2-utils xsltproc curl
+  bash lpr time cron host rsync libxml2-utils xsltproc curl vim
 
 # Install Tooling 
-RUN apt-get install -y build-essential default-jre pypy3 default-jdk
+RUN apt-get install -y build-essential default-jre default-jdk pypy3 
 
 # Cleanup
 RUN apt-get clean 
@@ -76,5 +76,3 @@ HEALTHCHECK --interval=10s --timeout=30s --start-period=5s --retries=3 \
 
 # Run
 CMD /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
-
-

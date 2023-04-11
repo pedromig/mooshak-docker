@@ -4,6 +4,7 @@ services:
   mooshak:
     image: mooshak:latest
     container_name: mooshak
+    hostname: mooshak
     env_file:
       - .env
     build:

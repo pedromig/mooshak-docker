@@ -3,6 +3,9 @@ FROM ubuntu:latest
 LABEL MAINTAINER="Pedro Rodrigues <pedromiguelrodrigues2000@gmail.com>, Samuel Carinhas <samuelsantos.c.2001@gmail.com>"
 LABEL VERSION="0.1.0"
 
+# non-interactive frontend during build
+ARG DEBIAN_FRONTEND=noninteractive
+
 # Environment Variables
 ENV MOOSHAK_VERSION=1.6.6
 
@@ -19,14 +22,14 @@ RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
   locale-gen
 
 # More Environment Variables
-ENV DEBIAN_FRONTEND=noninteractive
 ENV LC_ALL=en_US.UTF-8 
 ENV LANG=en_US.UTF-8 
 ENV LANGUAGE=en_US.UTF-8
 
 # More packages
 RUN apt-get install -y gcc make tcl apache2 apache2-suexec-custom \
-  bash lpr time cron host rsync libxml2-utils xsltproc curl vim
+  lpr time cron host rsync libxml2-utils xsltproc curl vim sendmail \
+  sasl2-bin
 
 # Install Tooling 
 RUN apt-get install -y build-essential default-jre default-jdk pypy3 
@@ -64,7 +67,6 @@ WORKDIR /home/mooshak
 
 # Expose Ports
 EXPOSE 80
-EXPOSE 443
 
 # Expose Volumes
 VOLUME /home/mooshak/data

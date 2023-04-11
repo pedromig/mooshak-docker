@@ -3,7 +3,12 @@
 ## About
 A Dockerfile for building a Docker image with Mooshak! 
 
-Mooshak is a system for managing programming contests on the Web. Mooshak's basic features include automatic judging of submitted programs, answering to clarification questions about problem descriptions, reevaluation of programs, tracking printouts, among many others.
+Mooshak is a system for managing programming contests on the Web. Mooshak's
+basic features include automatic judging of submitted programs, answering to
+clarification questions about problem descriptions, reevaluation of programs,
+tracking printouts, among many others.
+
+[Website](https://mooshak.dcc.fc.up.pt/)
 
 ## Requirements
   * docker
@@ -39,7 +44,7 @@ docker run --rm -it \
 ## Attaching a shell
 
 ```sh
-docker exec -it <container> /bin/bash 
+docker exec -it <container> bash 
 ```
 
 ## Contributing 
@@ -52,8 +57,8 @@ Contributions are what make the open source community such an amazing place to b
 * Open a Pull Request
 
 ## License
+
 This project is distributed under the [MIT](LICENSE) License.
 
 ## Collaborators 
-
 * [Samuel Carinhas](https://github.com/SamuelCarinhas)

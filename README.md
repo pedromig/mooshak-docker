@@ -8,13 +8,13 @@ basic features include automatic judging of submitted programs, answering to
 clarification questions about problem descriptions, reevaluation of programs,
 tracking printouts, among many others.
 
-[Website](https://mooshak.dcc.fc.up.pt/)
+[Mooshak Website](https://mooshak.dcc.fc.up.pt/)
 
 ## Requirements
   * docker
   * docker-compose (optional)
 
-## How To Run
+## How to Build
 
 ### Using docker-compose (**TLDR**)
 

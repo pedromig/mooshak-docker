@@ -36,7 +36,7 @@ docker build . -t mooshak
 # Run Image (container)
 docker run --rm -it \
   -p ${HTTP_PORT}:80 \
-  -v ${MOOSHAK_DATA_VOLUME}:/home/mooshak/data \
+  -v ${MOOSHAK_DATA_VOLUME}:/home/mooshak \
   -v ${APACHE2_DATA_VOLUME}:/etc/apache2 \
   mooshak:latest
 ```

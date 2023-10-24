@@ -14,7 +14,7 @@ services:
     ports:
       - ${mooshak_port}:80
     volumes:
-      - mooshak:/home/mooshak/data
+      - mooshak:/home/mooshak
       - apache2:/etc/apache2
 
 volumes:

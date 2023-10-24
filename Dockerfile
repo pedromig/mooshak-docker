@@ -69,7 +69,7 @@ WORKDIR /home/mooshak
 EXPOSE 80
 
 # Expose Volumes
-VOLUME /home/mooshak/data
+VOLUME /home/mooshak
 VOLUME /etc/apache2
 
 # Healthcheck
